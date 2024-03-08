@@ -1,0 +1,155 @@
+@font-face {
+	font-family: 'cern';
+	src:url('/assets/fonts/cern-terminal.woff') format('woff'),
+		url('/assets/fonts/cern-terminal.ttf') format('truetype');
+}
+
+* {
+	/* display: inline; */
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	color: inherit;
+	line-height: normal;
+}
+
+:root {
+	--accent-col: hsl(150, 100%, 50%);
+	--bg-col: #000000;
+}
+
+/*
+img, video, audio, svg, canvas, iframe, isindex {
+	display: none;
+}
+*/
+
+html, body, /*head,*/ title,
+h0, h1, h2, h3, h4, h5, h6, p, ul, li, ol, pre, table,
+div, section, aside, header, footer, dl {
+	display: block;
+}
+
+a, b, strong, em, i, span {
+	display: inline;
+}
+
+html {
+	background: var(--bg-col);
+	width: 44em; /* .55 * 80 */
+	width: 80ch;
+	height: 37.5em; /* 25 lines */
+	margin: 0px auto;
+	padding-bottom: 1.5em;
+	overflow: hidden;
+	color: var(--accent-col);
+	text-shadow: 0 0 6px;
+	word-wrap: break-word;
+	font-family: cern, monospace;
+	font-kerning: none !important;
+	line-height: 0.72em;
+	letter-spacing: 0px;
+}
+
+html * {
+	font: inherit !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+h1 {
+	margin: 1.5em 0; /* 1 line of space above and below h1 only */
+	text-align: center;
+	text-transform: uppercase;  /* only h1, h2 all caps */
+}
+
+h2 {
+	text-transform: uppercase; /* only h1, h2 all caps */
+}
+
+h3 {
+	margin: 0 1.1em;
+	margin: 0 2ch; /* h3 indents 2 chars */
+}
+
+h4 {
+	margin: 0 2.2em;
+	margin: 0 4ch; /* h4 indents 4 chars */
+}
+
+h5 {
+	margin: 0 3.3em;
+	margin: 0 6ch; /* h5 indents 6 chars */
+}
+
+h6 {
+	margin: 0 4.4em;
+	margin: 0 8ch; /* h6 indents 8 chars */
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	height: min-content;
+	padding: 0;
+}
+a:hover {
+	text-decoration: 1px underline;
+	text-decoration-style: dotted;
+}
+a:active {
+	/* text-decoration: 1px underline; */
+	text-decoration-style: solid;
+	/* outline: var(--accent-col) dotted 1px; */
+}
+
+p {
+	margin-top: 1.5em;
+	/* paragraph has one line after... but <P> was used more as a
+	   separator than a wrapper... so using margin-top instead    */
+}
+
+ol, ul, dl {
+	margin: 1.5em 0; /* list style has 1 line of space above and below */
+}
+
+/* Definition lists */
+dt, dd {
+	display: inline-block;
+	vertical-align: top;
+}
+
+dt:not(:first-of-type),
+dd:not(:first-of-type) {
+	margin-top: 1.5em;
+}
+
+dt {
+	width: 20ch;
+	margin-left: 7ch;
+}
+dd {
+	width: 27.5em;
+	width: 50ch;
+}
+
+
+pre, xmp {
+	display: block;
+	white-space: pre;
+}
+
+
+address {
+	display: block;
+	text-align: right;
+}
+
+/*should only  work for first character without intervening elements e.g. not <hp1><p>*/
+hp1, hp2 {
+	text-transform: uppercase;
+}
+
+form, input, button, select, textarea {display: none}

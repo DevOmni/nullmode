@@ -1,0 +1,67 @@
+html {
+    height: 100vh;
+    margin: 0 initial;
+    padding: 0;
+}
+
+body {
+	/* width: 100vw;  */
+	width: 100%; 
+    height: fit-content;
+    position: relative;
+    margin-top: 5em;
+    background-color: var(--bg-col);
+	/* margin: auto; */
+    filter: url("/assets/filters/rgb.svg#6 bits");
+}
+
+header, footer {
+    width: 100%;
+    text-align: center;
+}
+
+pre {
+    text-align: center;
+    cursor:default; 
+    user-select:none;;
+}
+pre.fit-content {
+    width: fit-content;
+}
+
+marquee {
+    width: 100%;
+    min-height: 1em;
+}
+
+/* footer {
+    position: absolute;
+    bottom: 1ch;
+} */
+
+header > marquee {
+    /* width: calc(100% - 3ch); */
+    width: 67ch;
+}
+
+pre.header-pre, pre.well, pre.content {
+    position: relative;
+}
+marquee.well, marquee.nullcell, marquee.content {
+    position: absolute;
+    width: 76ch;
+}
+marquee.well {
+    top: 1.5ch;
+    left: 2ch;
+}
+marquee.nullcell {
+    top: 1ch;
+    left: 2ch;
+    height: 9ch;
+}
+marquee.content {
+    top: -0.5ch;
+    left: 2ch;
+    height: 28.5ch;
+}
