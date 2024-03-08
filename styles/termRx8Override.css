@@ -2,6 +2,16 @@ html {
     height: 100vh;
     margin: 0 initial;
     padding: 0;
+    position: relative;
+/* }
+html::after {
+    content: " ";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height: 100%;
+    z-index: 99;
+    pointer-events: none; */
+    filter: brightness(130%);
 }
 
 body {
@@ -12,7 +22,7 @@ body {
     margin-top: 5em;
     background-color: var(--bg-col);
 	/* margin: auto; */
-    filter: url("/assets/filters/rgb.svg#6 bits");
+    filter: url("/assets/filters/rgb.svg#16 bits");
 }
 
 header, footer {
